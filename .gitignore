@@ -1,0 +1,10 @@
+.venv
+.vscode
+.ipynb_checkpoints
+*.joblib
+__pycache__
+.trash
+.DS_Store
+*.zip
+TODO.md
+*.egg-info
