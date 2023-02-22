@@ -13,7 +13,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8.1'
+          python-version: '3.8.16'
           
       - name: init
         run: make init
@@ -22,4 +22,7 @@ jobs:
         run: pip install papermill
           
       - name: execute notebook
-        run: papermill notebooks/oferta_relampago.ipynb notebooks/oferta_relampago_output.ipynb
+        run: |
+          cd notebooks && \
+          echo $(pwd) && \
+          papermill oferta_relampago.ipynb oferta_relampago_output.ipynb
