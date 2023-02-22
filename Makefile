@@ -21,7 +21,9 @@ venv:
 ## Install requirements - for local dev - includes dev requirements
 install:
 	. ./$(VENV_NAME)/bin/activate && \
-	$(PYTHON_INTERPRETER) -m pip install -e ".[dev]"
+	$(PYTHON_INTERPRETER) -m pip install -e ".[dev]" && \
+	$(PYTHON_INTERPRETER) -m nltk.downloader stopwords && \
+	$(PYTHON_INTERPRETER) -m nltk.downloader wordnet
 
 ## Add virtualenv to ipython kernel - for jupyter notebooks
 jupyter-kernel:
