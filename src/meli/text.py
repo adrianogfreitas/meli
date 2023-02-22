@@ -89,3 +89,4 @@ def most_similar(row, embeddings_base, embeddings_to_compare, df_to_compare, n_t
             break
     
     return (items[:n_top], sim_values[:n_top])
+    
