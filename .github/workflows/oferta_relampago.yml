@@ -25,4 +25,4 @@ jobs:
         run: |
           cd notebooks && \
           echo $(pwd) && \
-          papermill notebooks/oferta_relampago.ipynb notebooks/oferta_relampago_output.ipynb
+          papermill oferta_relampago.ipynb oferta_relampago_output.ipynb
