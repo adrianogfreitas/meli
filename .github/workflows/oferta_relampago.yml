@@ -1,0 +1,25 @@
+name: oferta-relampago
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run_notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.1'
+          
+      - name: init
+        run: make init
+          
+      - name: install papermill
+        run: pip install papermill
+          
+      - name: execute notebook
+        run: papermill notebooks/oferta_relampago.ipynb notebooks/oferta_relampago_output.ipynb
