@@ -23,5 +23,6 @@ jobs:
           
       - name: execute notebook
         run: |
-          cd notebooks
+          cd notebooks && \
+          echo $(pwd) && \
           papermill notebooks/oferta_relampago.ipynb notebooks/oferta_relampago_output.ipynb
