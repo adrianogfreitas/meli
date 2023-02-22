@@ -89,5 +89,4 @@ def most_similar(row, embeddings_base, embeddings_to_compare, df_to_compare, n_t
             break
     
     return (items[:n_top], sim_values[:n_top])
-    # return ([k for k, _ in sorted(sim_dict.items(), key=lambda x: x[1], reverse=True)][:n_top],
-    #         [v for _, v in sorted(sim_dict.items(), key=lambda x: x[1], reverse=True)][:n_top])
+    
