@@ -22,4 +22,6 @@ jobs:
         run: pip install papermill
           
       - name: execute notebook
-        run: papermill notebooks/oferta_relampago.ipynb notebooks/oferta_relampago_output.ipynb
+        run: |
+          cd notebooks
+          papermill notebooks/oferta_relampago.ipynb notebooks/oferta_relampago_output.ipynb
